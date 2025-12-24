@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ransomware Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🛡️ Ransomware Detection System</h1>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('index') }}" class="active">Scan</a>
+                <a href="{{ url_for('about') }}">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <div class="hero">
+            <h2>Protect Your Files from Ransomware</h2>
+            <p>Upload a file to scan for ransomware indicators and encryption patterns</p>
+        </div>
+
+        <div class="upload-section">
+            <div class="upload-box" id="uploadBox">
+                <div class="upload-icon">📁</div>
+                <h3>Drop your file here or click to browse</h3>
+                <p class="upload-hint">Maximum file size: 16MB</p>
+                <input type="file" id="fileInput" accept="*/*" style="display: none;">
+                <button id="browseBtn" class="btn-primary">Browse Files</button>
+            </div>
+        </div>
+
+        <div id="results" class="results-section" style="display: none;">
+            <div class="results-container">
+                <div class="results-header">
+                    <h3>Scan Results</h3>
+                    <button id="scanAgainBtn" class="btn-secondary">Scan Another File</button>
+                </div>
+                
+                <div id="resultsContent"></div>
+            </div>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Analyzing file...</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ransomware Detection System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

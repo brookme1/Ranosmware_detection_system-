@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Ransomware Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🛡️ Ransomware Detection System</h1>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('index') }}">Scan</a>
+                <a href="{{ url_for('about') }}" class="active">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <div class="about-section">
+            <h2>About This Project</h2>
+            
+            <div class="info-card">
+                <h3>🎯 Purpose</h3>
+                <p>This Ransomware Detection System is designed to help identify potentially malicious files that may contain ransomware or have been encrypted by ransomware attacks.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>🔍 Detection Methods</h3>
+                <ul>
+                    <li><strong>Extension Analysis:</strong> Checks for known ransomware file extensions</li>
+                    <li><strong>Signature Detection:</strong> Scans for known ransomware signatures and patterns</li>
+                    <li><strong>Filename Patterns:</strong> Identifies suspicious filename patterns commonly used by ransomware</li>
+                    <li><strong>Entropy Analysis:</strong> Calculates file entropy to detect potential encryption</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>⚠️ Important Notes</h3>
+                <ul>
+                    <li>This tool is for educational and detection purposes only</li>
+                    <li>Always maintain regular backups of important files</li>
+                    <li>Use comprehensive antivirus software for complete protection</li>
+                    <li>Be cautious when handling suspicious files</li>
+                    <li>Files uploaded are analyzed and immediately deleted from the server</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>🚀 Live Demo</h3>
+                <p>Access the public deployment here:</p>
+                <p><a href="https://ransomware-detection-system-1.onrender.com/" target="_blank" class="demo-link">🔗 https://ransomware-detection-system-1.onrender.com/</a></p>
+            </div>
+
+            <div class="info-card">
+                <h3>🛠️ Technology Stack</h3>
+                <ul>
+                    <li>Python Flask - Web Framework</li>
+                    <li>Machine Learning - Pattern Recognition</li>
+                    <li>File Analysis Tools - Signature & Entropy Detection</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>Ready to scan a file?</h3>
+            <a href="{{ url_for('index') }}" class="btn-primary">Go to Scanner</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ransomware Detection System. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
