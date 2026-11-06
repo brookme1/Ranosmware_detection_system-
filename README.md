@@ -1,6 +1,6 @@
 Ransomware Detection System
 
-Live Demo
+Frontend Live Demo
 Access the public deployment here:
 🔗 https://ransomware-detection-system-1.onrender.com/
 
